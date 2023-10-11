@@ -1,8 +1,55 @@
 export default [
   // Categoría: Terror
+  {
+    "id": "resident-evil-1",
+    "name": "Resident Evil",
+    "type": "Terror",
+    "shortDescription": "Película de terror y ciencia ficción basada en el videojuego.",
+    "description": "Resident Evil es una película de terror y ciencia ficción dirigida por Paul W.S. Anderson y lanzada en 2002...",
+    "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRreeKTZliPW4bM0t5bQOkDSvkd3qR70NQDnUT1_rfSjI3M_8tX",
+    "trailerUrl": "https://www.youtube.com/watch?v=aNEMuldkKnA",
+    "facts": {
+      "releaseDate": "15 de marzo de 2002",
+      "mainActors": [
+        "Milla Jovovich",
+        "Michelle Rodriguez",
+        "Eric Mabius",
+        "James Purefoy",
+        "Colin Salmon"
+        ],
+      "awards": [], // Dejar vacío si no ha ganado ningún premio
+      "budget": "Aproximadamente $33 millones de dólares",
+      "criticRating": "35%",
+      "audienceRating": "67%"
+    }
+  },
+  {
+    "id": "belzebuth",
+    "name": "Belzebuth",
+    "type": "Terror",
+    "shortDescription": "Película de terror sobrenatural",
+    "description": "Belzebuth es una película de terror sobrenatural que se estrenó en 2017 en el Festival Internacional de Cine de Sitges y en México en 2019...",
+    "imageUrl": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcScQCegvigKb4DLblUkAnsfJgSJwrQ-rRS9OdlnAxAmw5w_VTLY",
+    "trailerUrl": "https://youtu.be/Ujf1eurByvw?si=yFI4x_7CJ-DtKFGE",
+    "facts": {
+      "releaseDate": "2017 en el Festival de Sitges, 2019 en México",
+      "mainActors": [
+        "Tobin Bell",
+        "Joaquín Cosio",
+        "Tate Ellington",
+        "Giovanna Zacarías",
+        "José Sefami"
+        ],
+      "awards": [], // Dejar vacío si no ha ganado ningún premio
+      "budget": "No disponible", // Cambiar si tienes información sobre el presupuesto
+      "criticRating": "80%",
+      "audienceRating": "66%"
+    }
+  },
 {
   "id": "huye",
   "name": "Huye",
+  "type": "Terror",
   "shortDescription": "Película de terror y suspenso dirigida por Jordan Peele",
   "description": "Huye es una película de terror y suspenso dirigida por Jordan Peele...",
   "imageUrl": "https://mx.web.img2.acsta.net/c_310_420/pictures/17/08/05/23/55/189240.jpg",
@@ -27,6 +74,7 @@ export default [
 {
   "id": "resplandor",
   "name": "El Resplandor",
+  "type": "Terror",
   "shortDescription": "Película de terror dirigida por Stanley Kubrick",
   "description": "El Resplandor es una película de terror dirigida por Stanley Kubrick...",
   "imageUrl": "https://www.ereschaco.com/img/noticias/1508856284_746124_1508856683_noticia_normal.jpg",
@@ -47,6 +95,7 @@ export default [
 {
   "id": "it-1990",
   "name": "It (1990)",
+  "type": "Terror",
   "shortDescription": "Miniserie de terror basada en la novela de Stephen King",
   "description": "It (1990) es una miniserie de terror basada en la novela de Stephen King...",
   "imageUrl": "https://pics.filmaffinity.com/it-199479174-large.jpg",
@@ -67,6 +116,7 @@ export default [
 {
   "id": "saw",
   "name": "Saw",
+  "type": "Terror",
   "shortDescription": "Película de terror y suspenso dirigida por James Wan",
   "description": "Saw es una película de terror y suspenso dirigida por James Wan...",
   "imageUrl": "https://es.web.img2.acsta.net/c_310_420/medias/nmedia/18/89/75/36/20065254.jpg",
@@ -88,6 +138,7 @@ export default [
 {
   "id": "como-si-fuera-la-primera-vez",
   "name": "Como si fuera la primera vez",
+  "type": "Comedia Romántica",
   "shortDescription": "Comedia romántica protagonizada por Adam Sandler y Drew Barrymore",
   "description": "Como si fuera la primera vez es una comedia romántica que sigue la historia...",
   "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcR75Eo7baEZrmk84z4Hm_-uk1xY4sMuelbI6FI0X-8ECEydiTBJ",
@@ -108,6 +159,7 @@ export default [
 {
   "id": "la-propuesta",
   "name": "La Propuesta",
+  "type": "Comedia Romántica",
   "shortDescription": "Comedia romántica protagonizada por Sandra Bullock y Ryan Reynolds",
   "description": "La Propuesta es una comedia romántica que narra la historia de...",
   "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS62HgBcRaLx2rvum_oqqZPoCkLiPK3oRT-6EbbQIcttUlWWQQx",
@@ -128,9 +180,10 @@ export default [
 {
   "id": "diario-de-una-pasion",
   "name": "Diario de una Pasión",
+  "type": "Comedia Romántica",
   "shortDescription": "Drama romántico basado en la novela de Nicholas Sparks",
   "description": "Diario de una Pasión es un drama romántico basado en la novela de Nicholas Sparks...",
-  "imageUrl": "https://static.wikia.nocookie.net/doblaje/images/a/a6/DiarioDeUnaPasionPosterLA.jpg/revision/latest?cb=20201127164121&path-prefix=es",
+  "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTZfAvQ4lq-p5CrO2gPGnTT7wdMdSq7BVkQwD68-fLvchs7SXy6",
   "trailerUrl": "https://youtu.be/BjJcYdEOI0k?si=eSeaFW6GgBuBMrn7",
   "facts": {
     "releaseDate": "25 de junio de 2004 (EE. UU.)",
@@ -151,9 +204,10 @@ export default [
 {
   "id": "la-la-land",
   "name": "La La Land",
+  "type": "Comedia Romántica",
   "shortDescription": "Musical romántico dirigido por Damien Chazelle",
   "description": "La La Land es un musical romántico que sigue la historia de...",
-  "imageUrl": "https://pics.filmaffinity.com/la_la_land-262021831-mmed.jpg",
+  "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRTeGqgCfnw0J5becKNZ46EqVmeGOxTvjQfEl3LjlKY1AOgLcqv",
   "trailerUrl": "https://youtu.be/45s24h98iOc?si=-IoxO1zByzBdi3aR",
   "facts": {
     "releaseDate": "9 de diciembre de 2016 (EE. UU.)",
@@ -173,6 +227,7 @@ export default [
 {
   "id": "miss-simpatia",
   "name": "Miss Simpatía",
+  "type": "Comedia Romántica",
   "shortDescription": "Comedia de acción protagonizada por Sandra Bullock",
   "description": "Miss Simpatía es una comedia de acción que sigue la historia de...",
   "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT_PRPWOAvRfpUlqw35saSn6yRKLH5QLbzwFjn_RhDuTpqZda_O",
@@ -195,6 +250,7 @@ export default [
 {
   "id": "10-cosas-que-odio-de-ti",
   "name": "10 Cosas que Odio de Ti",
+  "type": "Comedia Romántica",
   "shortDescription": "Comedia romántica basada en la obra de William Shakespeare",
   "description": "10 Cosas que Odio de Ti es una comedia romántica basada en la obra de William Shakespeare...",
   "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRWA58yHysIm3TueB3v-eOCA1WzOaBMXxI9I7JRIC6pHN7Pz9NO",
@@ -216,6 +272,7 @@ export default [
 {
   "id": "mulan-1",
   "name": "Mulan",
+  "type": "Infantil",
   "shortDescription": "Película animada de Disney sobre una joven que se disfraza de hombre para unirse al ejército chino.",
   "description": "Mulan es una película animada de Disney lanzada en 1998. La historia sigue a una joven llamada Mulan que se disfraza de hombre para unirse al ejército chino en lugar de su padre...",
   "imageUrl": "https://es.web.img2.acsta.net/c_310_420/medias/nmedia/18/80/55/28/20134045.jpg",
@@ -232,6 +289,7 @@ export default [
 {
   "id": "toy-story",
   "name": "Toy Story",
+  "type": "Infantil",
   "shortDescription": "Película animada sobre juguetes que cobran vida cuando los humanos no están presentes.",
   "description": "Toy Story es una película animada lanzada por Pixar en 1995. La historia sigue a un grupo de juguetes que cobran vida cuando los humanos no están presentes...",
   "imageUrl": "https://es.web.img2.acsta.net/c_310_420/pictures/14/03/17/10/20/509771.jpg",
@@ -248,6 +306,7 @@ export default [
 {
   "id": "la-era-del-hielo",
   "name": "La Era del Hielo",
+  "type": "Infantil",
   "shortDescription": "Película animada sobre la vida de criaturas prehistóricas durante la Edad de Hielo.",
   "description": "La Era del Hielo es una película animada lanzada en 2002. La historia sigue las aventuras de un mamut, un tigre dientes de sable y un perezoso durante la Edad de Hielo...",
   "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ6ArKtB4gSWn2IkhdUWMGp3fJ_fUECfeAYXM_yQNQb23cbJMrL",
@@ -264,6 +323,7 @@ export default [
 {
   "id": "fantasia",
   "name": "Fantasía",
+  "type": "Infantil",
   "shortDescription": "Película animada de Disney que combina música clásica con animación.",
   "description": "Fantasía es una película animada de Disney lanzada en 1940. Combina música clásica con secuencias animadas únicas y creativas...",
   "imageUrl": "https://es.web.img3.acsta.net/c_310_420/medias/nmedia/18/86/25/52/20325851.jpg",
@@ -280,6 +340,7 @@ export default [
 {
   "id": "el-rey-leon",
   "name": "El Rey León",
+  "type": "Infantil",
   "shortDescription": "Película animada de Disney sobre un joven león llamado Simba.",
   "description": "El Rey León es una película animada de Disney lanzada en 1994. La historia sigue a un joven león llamado Simba en su viaje hacia la madurez...",
   "imageUrl": "https://es.web.img2.acsta.net/c_310_420/medias/nmedia/18/68/20/31/19785394.jpg?coixp=47&coiyp=41",
@@ -296,6 +357,7 @@ export default [
 {
   "id": "wall-e",
   "name": "Wall-E",
+  "type": "Infantil",
   "shortDescription": "Película animada de ciencia ficción sobre un robot solitario en un futuro distópico.",
   "description": "Wall-E es una película animada de Pixar lanzada en 2008. La historia sigue a Wall-E, un robot solitario, en un futuro distópico lleno de basura...",
   "imageUrl": "https://es.web.img3.acsta.net/c_310_420/pictures/14/04/30/10/41/026995.jpg",
@@ -313,9 +375,10 @@ export default [
 {
   "id": "playful-kiss",
   "name": "Playful Kiss",
+  "type": "Kdrama",
   "shortDescription": "Serie coreana romántica basada en un manga.",
   "description": "Playful Kiss es una serie coreana lanzada en 2010, basada en el manga japonés 'Itazura na Kiss'. La historia sigue las desventuras románticas de una joven llamada Oh Ha-ni...",
-  "imageUrl": "https://static.wikia.nocookie.net/drama/images/f/f6/PlayfulKissPoster.jpg/revision/latest?cb=20120711033845&path-prefix=es",
+  "imageUrl": "https://i.pinimg.com/originals/07/91/80/0791809e2267d098b26fb8dfb7d8c3e5.jpg",
   "trailerUrl": "https://www.youtube.com/watch?v=IEg49sYoQJY",
   "facts": {
     "releaseDate": "1 de septiembre de 2010",
@@ -328,9 +391,10 @@ export default [
 {
   "id": "love-to-hate-you",
   "name": "Love to Hate You",
+  "type": "Kdrama",
   "shortDescription": "Serie coreana de comedia romántica.",
   "description": "Love to Hate You es una serie coreana de comedia romántica lanzada en 2020. La historia gira en torno a una pareja que comienza con una relación complicada...",
-  "imageUrl": "https://static.wikia.nocookie.net/drama/images/8/80/Love_to_Hate_You-Netflix-2023-01.jpg/revision/latest/scale-to-width-down/1200?cb=20230118103444&path-prefix=es",
+  "imageUrl": "https://fr.web.img4.acsta.net/pictures/23/01/31/17/05/3122986.jpg",
   "trailerUrl": "https://www.youtube.com/watch?v=drPRL7GrVco",
   "facts": {
     "releaseDate": "6 de mayo de 2020",
@@ -343,9 +407,10 @@ export default [
 {
   "id": "abogada-woo",
   "name": "Abogada Woo",
+  "type": "Kdrama",
   "shortDescription": "Serie coreana de drama legal.",
   "description": "Abogada Woo es una serie coreana de drama legal lanzada en 2016. La historia sigue a una abogada talentosa mientras lucha por la justicia en el sistema legal coreano...",
-  "imageUrl": "https://pics.filmaffinity.com/Woo_abogada_extraordinaria_Serie_de_TV-807652581-large.jpg",
+  "imageUrl": "https://www.infobae.com/new-resizer/jEgWsux9AYiucDJYnv54UG-xRLQ=/1200x1600/filters:format(webp):quality(85)/cloudfront-us-east-1.images.arcpublishing.com/infobae/OIB5OFGNWNDKPBSKIA3FJEOT4A.jpg",
   "trailerUrl": "https://www.youtube.com/watch?v=oAXl3acDZjc",
   "facts": {
     "releaseDate": "25 de julio de 2016",
@@ -358,6 +423,7 @@ export default [
 {
   "id": "goblin",
   "name": "Goblin",
+  "type": "Kdrama",
   "shortDescription": "Serie coreana de fantasía y romance.",
   "description": "Goblin es una serie coreana de fantasía y romance lanzada en 2016. La trama gira en torno a un goblin inmortal y su relación con una joven mortal...",
   "imageUrl": "https://images.justwatch.com/poster/253085387/s718/goblin-el-solitario-ser-inmortal.jpg",
@@ -373,6 +439,7 @@ export default [
 {
   "id": "escalera-al-cielo",
   "name": "Escalera al Cielo",
+  "type": "Kdrama",
   "shortDescription": "Serie coreana de drama y romance.",
   "description": "Escalera al Cielo es una serie coreana de drama y romance lanzada en 2003. La historia narra el amor y las dificultades de una pareja a lo largo de los años...",
   "imageUrl": "https://images.justwatch.com/poster/166251016/s718/escalera-al-cielo.jpg",
@@ -388,9 +455,10 @@ export default [
 {
   "id": "los-chicos-son-mejores-que-las-flores",
   "name": "Los Chicos Son Mejores que las Flores",
+  "type": "Kdrama",
   "shortDescription": "Serie coreana basada en un manga.",
   "description": "Los Chicos Son Mejores que las Flores es una serie coreana lanzada en 2009, basada en el manga japonés 'Hana Yori Dango'. La trama sigue a una joven de clase baja que ingresa en una prestigiosa escuela...",
-  "imageUrl": "https://static.wikia.nocookie.net/doblaje/images/7/73/BoysOverFlowers.jpg/revision/latest?cb=20190630220730&path-prefix=es",
+  "imageUrl": "https://upload.wikimedia.org/wikipedia/pt/8/89/Boys_over_flowers_promotional_poster.jpg",
   "trailerUrl": "https://www.youtube.com/watch?v=8GYGkdcCIjM",
   "facts": {
     "releaseDate": "5 de enero de 2009",

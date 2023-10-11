@@ -1,6 +1,7 @@
-export const renderItems = (data) => {
-  console.log(data)
-  // Aquí comienza tu código y puedes retornar lo que tu necesites
-  return 'example';
+export const renderItems = (data): HTMLLIElement => {
+  console.log(data);
+  const itemList: HTMLLIElement = document.createElement("li");
+ const itemContainer :HTMLSListElement = document.createElement(tagname "dl")
+  return 'itemList';
 };
 

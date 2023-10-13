@@ -19,3 +19,11 @@ const main = () => {
 main();
 
 console.log(document.querySelector("ul"));
+
+const btn= document.getElementById("Infantil");
+btn.addEventListener("click", function() {
+  let value="Infantil";
+  let renderFilter=filterData(data,value);
+  console.log("elección:infantil",renderFilter);
+  renderData(renderFilter);
+});

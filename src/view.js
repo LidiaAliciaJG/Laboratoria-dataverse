@@ -1,5 +1,5 @@
 export const renderItems = (data) => {
-  // Aquí comienza tu código y puedes retornar lo que tu necesites
+  // Aquí comienza tu código y puedes retornar lo que tu necesites GENERACION DINAMICA
   const itemList = document.createElement("li");
   const itemContainer = document.createElement("dl");
   itemContainer.innerHTML=`

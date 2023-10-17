@@ -10,6 +10,7 @@ export default [
     "trailerUrl": "https://www.youtube.com/watch?v=aNEMuldkKnA",
     "facts": {
       "releaseDate": "15 de marzo de 2002",
+      "temporality": "anterior", //solo colocar fecha
       "mainActors": [
         "Milla Jovovich",
         "Michelle Rodriguez",

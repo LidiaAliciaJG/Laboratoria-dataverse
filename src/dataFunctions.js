@@ -9,5 +9,5 @@ export const filterData = (data, value) => {
 };
 
 export const example = () => {
-  return "hola, soy ejemplo";
+ 
 };

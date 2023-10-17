@@ -23,7 +23,26 @@ console.log(document.querySelector("ul"));
 const btn= document.getElementById("Infantil");
 btn.addEventListener("click", function() {
   let value="Infantil";
-  let renderFilter=filterData(data,value);
+  let filterBy="type";
+  let renderFilter=filterData(data,filterBy,value);
   console.log("elección:infantil",renderFilter);
+  renderData(renderFilter);
+});
+
+const getvalue= document.getElementById("type-select");
+getvalue.addEventListener("change", function() {
+  let filterBy="type";
+  let value=getvalue.value;
+  let renderFilter=filterData(data,filterBy,value);
+  console.log("elección:"+filterBy,value,renderFilter);
+  renderData(renderFilter);
+});
+
+const getfilter= document.getElementById("filter-select");
+getfilter.addEventListener("change", function() {
+  let filterBy=getfilter.options[getfilter.selectedIndex].parentElement.getAttribute("data-content");
+  let value=getfilter.value;
+  let renderFilter=filterData(data,filterBy,value);
+  console.log("elección:"+filterBy,value,renderFilter);
   renderData(renderFilter);
 });

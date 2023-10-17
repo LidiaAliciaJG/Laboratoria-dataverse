@@ -2,6 +2,8 @@ export const renderItems = (data) => {
   // Aquí comienza tu código y puedes retornar lo que tu necesites GENERACION DINAMICA
   const itemList = document.createElement("li");
   const itemContainer = document.createElement("dl");
+  itemContainer.classList.add("card");
+  
   itemContainer.innerHTML=`
         <img src=${data.imageUrl} alt=${data.name} />
         <dt>Nombre:</dt><dd itemprop="name">${data.name}</dd>

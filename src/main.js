@@ -1,4 +1,4 @@
-import { example, filterData } from './dataFunctions.js';
+import { example, filterData,sortBy} from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
@@ -45,4 +45,12 @@ getfilter.addEventListener("change", function() {
   let renderFilter=filterData(data,filterBy,value);
   console.log("elección:"+filterBy,value,renderFilter);
   renderData(renderFilter);
+});
+
+// Selecciona el elemento select
+const filterSelect = document.getElementById("sort-select");
+filterSelect.addEventListener("change", function() { // Agrega un event listener para el cambio en el menú desplegable
+  const sortOrder = filterSelect.value; // Obtiene el valor seleccionado del menú desplegable
+  let sortedData = sortBy(data, sortOrder); // Llama a la función de ordenamiento
+  renderData(sortedData);
 });

@@ -11,7 +11,7 @@ export const renderItems = (data) => {
         <dt>Descripción:</dt><dd itemprop="description">${data.shortDescription}</dd>
         <dt>Fecha de Estreno:</dt><dd itemprop="releaseDate">${data.facts.releaseDate}</dd>
         <dt>Actores Principales:</dt><dd itemprop="mainActors">${data.facts.mainActors.join(", ")}</dd>
-        <dt>Premios:</dt><dd itemprop="awards">${data.facts.awards}</dd>
+        <dt>Premios:</dt><dd itemprop="awards">${data.facts.awards.join(", ")}</dd>
         <dt>Presupuesto:</dt><dd itemprop="budget">${data.facts.budget}</dd>
         <dt>Calificación de la Crítica:</dt><dd itemprop="criticRating">${data.facts.criticRating}</dd>
         <dt>Calificación de la Audiencia:</dt><dd itemprop="audienceRating">${data.facts.audienceRating}</dd>

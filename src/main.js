@@ -1,4 +1,4 @@
-import { example, filterData,sortBy} from './dataFunctions.js';
+import {filterData,sortBy} from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
@@ -20,15 +20,6 @@ main();
 
 console.log(document.querySelector("ul"));
 
-const btn= document.getElementById("Infantil");
-btn.addEventListener("click", function() {
-  let value="Infantil";
-  let filterBy="type";
-  let renderFilter=filterData(data,filterBy,value);
-  console.log("elección:infantil",renderFilter);
-  renderData(renderFilter);
-});
-
 const getvalue= document.getElementById("type-select");
 getvalue.addEventListener("change", function() {
   let filterBy="type";
@@ -38,12 +29,12 @@ getvalue.addEventListener("change", function() {
   renderData(renderFilter);
 });
 
-const getfilter= document.getElementById("filter-select");
+const getfilter= document.getElementById("temporality-select");
 getfilter.addEventListener("change", function() {
-  let filterBy=getfilter.options[getfilter.selectedIndex].parentElement.getAttribute("data-content");
+  let filterBy=getfilter.name;
   let value=getfilter.value;
   let renderFilter=filterData(data,filterBy,value);
-  console.log("elección:"+filterBy,value,renderFilter);
+  console.log("elección: filterby:"+filterBy,"value: "+value,"render:"+renderFilter);
   renderData(renderFilter);
 });
 

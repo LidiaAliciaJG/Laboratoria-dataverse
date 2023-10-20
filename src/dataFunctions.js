@@ -3,13 +3,16 @@ import data from './data/dataset.js';
 
 export const filterData = (data, filterBy, value) => {
   function filtrado(data) {
+    if (filterBy==="temporality") {
+      if (value=="actual"){
+        return data.facts["temporality"] >= 2010 && data.facts["temporality"] <= 2023;
+      } else if (value=="anterior") {
+        return data.facts["temporality"] < 2010 && data.facts["temporality"] >= 1980;
+      }
+    }
     return data[filterBy] == value || data.facts[filterBy] == value;
   };
   return data.filter(filtrado); //filter() requiere una funcion que returne true para revisar el array bajo esa condicion
-};
-
-export const example = () => {
-  return "hola, soy ejemplo";
 };
 
 export const sortBy = (data, sortOrder) => {

@@ -1,63 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>PelisInfo</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>PelisInfo</h1>
-    </header>
 
-    <button data-testid="button-clear">Limpiar filtro</button>
+<head>
+  <meta charset="utf-8">
+  <title>PelisInfo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-    <button id="Infantil">Infantiles</button>
-    
-    <label for="type-select">Categorías:</label>
+<body>
+  <header class="Encabezado" id="Encabezado">
+    <h1 class="Logo" id="Título">PelisInfo </h1>
+  </header>
 
-      <select name="categorias" id="type-select">
-      <option value="">Elegir una opcion</option>
-      <option value="Terror">Terror</option>
-      <option value="Comedia Romántica">Comedia Romántica</option>
-      <option value="Infantil">Infantil</option>
-      <option value="Kdrama">Kdrama</option>
-    </select>
+  <button data-testid="button-clear">Limpiar filtro</button>
 
-    <label for="filter-select">Filtrar por:</label>
+  <button id="Infantil">Infantiles</button>
 
-    <select name="filtros" id="filter-select">
-        <option value="">Elige una opcion</option>
-      <optgroup label="Año de estreno" data-content="temporality">
-        <option value="actual">2010-actualidad</option>
-        <option value="anterior">1980-2010</option>
-      </optgroup>
-      <optgroup label="Presupuesto" data-content="budget">
-        <option value="No disponible">No disponible</option>
-      </optgroup>
-      <optgroup label="Calificación" data-content="criticRating">
-        <option value="criticRating">Mejor Calificación</option>
-      </optgroup>
-    </select>
+  <label for="type-select">Categorías:</label>
 
-    <label for="sort-select">Ordenar por:</label>
+  <select name="categorias" id="type-select">
+    <option value="">Elegir una opcion</option>
+    <option value="Terror">Terror</option>
+    <option value="Comedia Romántica">Comedia Romántica</option>
+    <option value="Infantil">Infantil</option>
+    <option value="Kdrama">Kdrama</option>
 
-    <select name="Ordenar" id="sort-select">
-      <option value="">Elige una opcion</option>
-      <option value="asc"> A - Z</option>
-      <option value="desc"> Z - A</option>
-    </select>
-    
-    <main>
-      <h2>Introducción</h2>
-    </main>
+  </select>
 
-    <ul>
-    </ul>
+  <label for="filter-select">Filtrar por:</label>
 
-    <footer>
-      <p>Creado por Carla Campaña & Lidia A. Julián 2023</p>
-    </footer>
-    <script src="main.js" type="module"></script>
-  </body>
+  <select name="filtros" id="filter-select">
+    <option value="">Elige una opcion</option>
+    <optgroup label="Año de estreno" data-content="temporality">
+      <option value="actual">2010-actualidad</option>
+      <option value="anterior">1980-2010</option>
+    </optgroup>
+    <optgroup label="Presupuesto" data-content="budget">
+      <option value="No disponible">No disponible</option>
+    </optgroup>
+    <optgroup label="Calificación" data-content="criticRating">
+      <option value="criticRating">Mejor Calificación</option>
+    </optgroup>
+  </select>
+
+  <label for="sort-select">Ordenar por:</label>
+
+  <select name="Ordenar" id="sort-select">
+    <option value="">Elige una opcion</option>
+    <option value="asc"> A - Z</option>
+    <option value="desc"> Z - A</option>
+  </select>
+
+  <main>
+    <h2>Introducción</h2>
+  </main>
+
+  <ul>
+  </ul>
+
+  <footer>
+    <p>Creado por Carla Campaña & Lidia A. Julián 2023</p>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

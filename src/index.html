@@ -13,8 +13,7 @@
     <button data-testid="button-clear">Limpiar filtro</button>
     
     <label for="type-select">Categorías:</label>
-
-      <select name="categorias" id="type-select" data-testid="select-filter">
+    <select name="categorias" id="type-select" data-testid="select-filter">
       <option value="">Elegir una opcion</option>
       <option value="Terror">Terror</option>
       <option value="Comedia Romántica">Comedia Romántica</option>
@@ -22,20 +21,11 @@
       <option value="Kdrama">Kdrama</option>
     </select>
 
-    <label for="filter-select">Filtrar por:</label>
-
-    <select name="filtros" id="filter-select">
-        <option value="">Elige una opcion</option>
-      <optgroup label="Año de estreno" data-content="temporality">
+    <label for="temporality-select">Filtrar por:</label>
+    <select name="temporality" id="temporality-select" data-testid="filter-temporality">
+        <option value="">Año de estreno</option>
         <option value="actual">2010-actualidad</option>
         <option value="anterior">1980-2010</option>
-      </optgroup>
-      <optgroup label="Presupuesto" data-content="budget">
-        <option value="No disponible">No disponible</option>
-      </optgroup>
-      <optgroup label="Calificación" data-content="criticRating">
-        <option value="criticRating">Mejor Calificación</option>
-      </optgroup>
     </select>
 
     <label for="sort-select">Ordenar por:</label>

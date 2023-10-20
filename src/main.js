@@ -29,9 +29,9 @@ getvalue.addEventListener("change", function() {
   renderData(renderFilter);
 });
 
-const getfilter= document.getElementById("filter-select");
+const getfilter= document.getElementById("temporality-select");
 getfilter.addEventListener("change", function() {
-  let filterBy=getfilter.options[getfilter.selectedIndex].parentElement.getAttribute("data-content");
+  let filterBy=getfilter.name;
   let value=getfilter.value;
   let renderFilter=filterData(data,filterBy,value);
   console.log("elección: filterby:"+filterBy,"value: "+value,"render:"+renderFilter);

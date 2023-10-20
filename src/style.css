@@ -14,7 +14,7 @@ h1 {
 }
 
 label[for="type-select"],
-label[for="filter-select"],
+label[for="temporality-select"],
 label[for="sort-select"] {
 
   color: rgb(253, 253, 253);

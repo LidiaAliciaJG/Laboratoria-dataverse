@@ -10,7 +10,7 @@ export default [
     "trailerUrl": "https://www.youtube.com/watch?v=aNEMuldkKnA",
     "facts": {
       "releaseDate": "15 de marzo de 2002",
-      "temporality": "2002",
+      "temporality": "2002", //solo colocar fecha
       "mainActors": [
         "Milla Jovovich",
         "Michelle Rodriguez",
@@ -18,7 +18,7 @@ export default [
         "James Purefoy",
         "Colin Salmon"
         ],
-      "awards": ["Ninguno"], // Dejar vacío si no ha ganado ningún premio
+      "awards": [], // Dejar vacío si no ha ganado ningún premio
       "budget": "Aproximadamente $33 millones de dólares",
       "criticRating": "35%",
       "audienceRating": "67%"
@@ -34,7 +34,6 @@ export default [
     "trailerUrl": "https://youtu.be/Ujf1eurByvw?si=yFI4x_7CJ-DtKFGE",
     "facts": {
       "releaseDate": "2017 en el Festival de Sitges, 2019 en México",
-      "temporality": "2017",
       "mainActors": [
         "Tobin Bell",
         "Joaquín Cosio",
@@ -42,7 +41,7 @@ export default [
         "Giovanna Zacarías",
         "José Sefami"
         ],
-      "awards": ["Ninguno"], // Dejar vacío si no ha ganado ningún premio
+      "awards": [], // Dejar vacío si no ha ganado ningún premio
       "budget": "No disponible", // Cambiar si tienes información sobre el presupuesto
       "criticRating": "80%",
       "audienceRating": "66%"
@@ -58,7 +57,6 @@ export default [
   "trailerUrl": "https://youtu.be/svOneiOur98?si=dK8Mu2v01O8Vr6k7",
   "facts": {
     "releaseDate": "24 de febrero de 2017 (EE. UU.)",
-    "temporality": "2017",
     "mainActors": [
       "Daniel Kaluuya",
       "Allison Williams",
@@ -84,13 +82,12 @@ export default [
   "trailerUrl": "https://youtu.be/Y8z1LAkgR0s?si=pZJ0OZJmN0jzRp49",
   "facts": {
     "releaseDate": "23 de mayo de 1980 (EE. UU.)",
-    "temporality": "1980",
     "mainActors": [
       "Jack Nicholson",
       "Shelley Duvall",
       "Danny Lloyd"
     ],
-    "awards": ["Ninguno"],
+    "awards": [],
     "budget": "$19 millones",
     "criticRating": "84%",
     "audienceRating": "93%"
@@ -102,17 +99,16 @@ export default [
   "type": "Terror",
   "shortDescription": "Miniserie de terror basada en la novela de Stephen King",
   "description": "It (1990) es una miniserie de terror basada en la novela de Stephen King...",
-  "imageUrl": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQBjYoPxdK3DfpCASEFk8eZX-Ko4JzWWdl1AfaV0o70UlqdsGp3",
+  "imageUrl": "https://pics.filmaffinity.com/it-199479174-large.jpg",
   "trailerUrl": "https://youtu.be/8qW9lyAKg0s?si=hu69mo_q0nrG1N39",
   "facts": {
     "releaseDate": "18 de noviembre de 1990 (EE. UU.)",
-    "temporality": "1990",
     "mainActors": [
       "Tim Curry",
       "Jonathan Brandis",
       "Seth Green"
     ],
-    "awards": ["Ninguno"],
+    "awards": [],
     "budget": "No disponible",
     "criticRating": "82%",
     "audienceRating": "76%"
@@ -128,13 +124,12 @@ export default [
   "trailerUrl": "https://youtu.be/S-1QgOMQ-ls?si=oGMSe9DtRcYabcHY",
   "facts": {
     "releaseDate": "29 de octubre de 2004 (EE. UU.)",
-    "temporality": "2004",
     "mainActors": [
       "Cary Elwes",
       "Leigh Whannell",
       "Danny Glover"
     ],
-    "awards": ["Ninguno"],
+    "awards": [],
     "budget": "$1.2 millones",
     "criticRating": "48%",
     "audienceRating": "84%"
@@ -151,13 +146,12 @@ export default [
   "trailerUrl": "https://youtu.be/lKXgf7BUQnE",
   "facts": {
     "releaseDate": "13 de febrero de 2004 (EE. UU.)",
-    "temporality": "2004",
     "mainActors": [
       "Adam Sandler",
       "Drew Barrymore",
       "Rob Schneider"
     ],
-    "awards": ["Ninguno"],
+    "awards": [],
     "budget": "$75 millones",
     "criticRating": "45%",
     "audienceRating": "68%"
@@ -173,13 +167,12 @@ export default [
   "trailerUrl": "https://youtu.be/j_x2I3J7rVw?si=Ltoy95YnORFqVoGq",
   "facts": {
     "releaseDate": "19 de junio de 2009 (EE. UU.)",
-    "temporality": "2009",
     "mainActors": [
       "Sandra Bullock",
       "Ryan Reynolds",
       "Betty White"
     ],
-    "awards": ["Ninguno"],
+    "awards": [],
     "budget": "$40 millones",
     "criticRating": "44%",
     "audienceRating": "67%"
@@ -195,7 +188,6 @@ export default [
   "trailerUrl": "https://youtu.be/BjJcYdEOI0k?si=eSeaFW6GgBuBMrn7",
   "facts": {
     "releaseDate": "25 de junio de 2004 (EE. UU.)",
-    "temporality": "2004",
     "mainActors": [
       "Ryan Gosling",
       "Rachel McAdams",
@@ -220,7 +212,6 @@ export default [
   "trailerUrl": "https://youtu.be/45s24h98iOc?si=-IoxO1zByzBdi3aR",
   "facts": {
     "releaseDate": "9 de diciembre de 2016 (EE. UU.)",
-    "temporality": "2016",
     "mainActors": [
       "Ryan Gosling",
       "Emma Stone",
@@ -244,7 +235,6 @@ export default [
   "trailerUrl": "https://youtu.be/uflzo6WmyMo?si=_4EeVZwkesHQSsIv",
   "facts": {
     "releaseDate": "22 de diciembre de 2000 (EE. UU.)",
-    "temporality": "2000",
     "mainActors": [
       "Sandra Bullock",
       "Michael Caine",
@@ -268,13 +258,12 @@ export default [
   "trailerUrl": "https://youtu.be/QuAjU8evakM?si=vEgpWyKfwjbh-TMp",
   "facts": {
     "releaseDate": "31 de marzo de 1999 (EE. UU.)",
-    "temporality": "1999",
     "mainActors": [
       "Heath Ledger",
       "Julia Stiles",
       "Joseph Gordon-Levitt"
     ],
-    "awards": ["Ninguno"],
+    "awards": [],
     "budget": "$30 millones",
     "criticRating": "61%",
     "audienceRating": "69%"
@@ -291,7 +280,6 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=rmCAg6RbkTE",
   "facts": {
     "releaseDate": "5 de junio de 1998",
-    "temporality": "1998",
     "mainActors": ["Ming-Na Wen", "Eddie Murphy", "BD Wong"],
     "awards": ["Premio Annie a la Mejor Música en una Película Animada", "Premio Satellite a la Mejor Película de Animación"],
     "budget": "Aproximadamente $90 millones de dólares",
@@ -309,7 +297,6 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=dRb0VW14IZY",
   "facts": {
     "releaseDate": "22 de noviembre de 1995",
-    "temporality": "1995",
     "mainActors": ["Tom Hanks", "Tim Allen", "Don Rickles"],
     "awards": ["Premio Especial al Logro Técnico de la Academia"],
     "budget": "Aproximadamente $30 millones de dólares",
@@ -327,7 +314,6 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=RI7e1IksKEQ",
   "facts": {
     "releaseDate": "15 de marzo de 2002",
-    "temporality": "2002",
     "mainActors": ["Ray Romano", "John Leguizamo", "Denis Leary"],
     "awards": ["Premio Annie a la Mejor Película Animada"],
     "budget": "Aproximadamente $59 millones de dólares",
@@ -345,7 +331,6 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=yOjsvOX4qQA",
   "facts": {
     "releaseDate": "13 de noviembre de 1940",
-    "temporality": "1940",
     "mainActors": ["Leopold Stokowski"],
     "awards": ["Premio Oscar a la Mejor Banda Sonora Original"],
     "budget": "Aproximadamente $2.28 millones de dólares (en ese momento)",
@@ -363,7 +348,6 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=h-As2lUk6IA",
   "facts": {
     "releaseDate": "15 de junio de 1994",
-    "temporality": "1994",
     "mainActors": ["Matthew Broderick", "James Earl Jones", "Jeremy Irons"],
     "awards": ["Premio Óscar a la Mejor Canción Original"],
     "budget": "Aproximadamente $45 millones de dólares",
@@ -381,7 +365,6 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=IYPe2oWBV_w",
   "facts": {
     "releaseDate": "27 de junio de 2008",
-    "temporality": "2008",
     "mainActors": ["Ben Burtt", "Elissa Knight"],
     "awards": ["Premio Óscar a la Mejor Película Animada"],
     "budget": "Aproximadamente $180 millones de dólares",
@@ -400,10 +383,8 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=IEg49sYoQJY",
   "facts": {
     "releaseDate": "1 de septiembre de 2010",
-    "temporality": "2010",
     "mainActors": ["Kim Hyun-joong", "Jung So-min"],
-    "awards": ["Ninguno"], // Dejar vacío si no ha ganado ningún premio
-    "budget": "No disponible",
+    "awards": [], // Dejar vacío si no ha ganado ningún premio
     "criticRating": "67%",
     "audienceRating": "82%"
   }
@@ -418,10 +399,8 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=drPRL7GrVco",
   "facts": {
     "releaseDate": "6 de mayo de 2020",
-    "temporality": "2020",
     "mainActors": ["Lee Sung-kyung", "Kim Young-dae"],
-    "awards": ["Ninguno"], // Dejar vacío si no ha ganado ningún premio
-    "budget": "No disponible",
+    "awards": [], // Dejar vacío si no ha ganado ningún premio
     "criticRating": "78%",
     "audienceRating": "88%"
   }
@@ -436,10 +415,8 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=oAXl3acDZjc",
   "facts": {
     "releaseDate": "25 de julio de 2016",
-    "temporality": "2016",
     "mainActors": ["Kim Hyun-joo", "Yoon Yeo-jeong"],
-    "awards": ["Ninguno"], // Dejar vacío si no ha ganado ningún premio
-    "budget": "No disponible",
+    "awards": [], // Dejar vacío si no ha ganado ningún premio
     "criticRating": "84%",
     "audienceRating": "91%"
   }
@@ -454,10 +431,8 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=S94ukM8C17A",
   "facts": {
     "releaseDate": "2 de diciembre de 2016",
-    "temporality": "2016",
     "mainActors": ["Gong Yoo", "Kim Go-eun"],
     "awards": ["Premio Baeksang Arts a la Mejor Serie de TV"],
-    "budget": "No disponible",
     "criticRating": "90%",
     "audienceRating": "95%"
   }
@@ -472,10 +447,8 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=SN61FicHhC0",
   "facts": {
     "releaseDate": "3 de diciembre de 2003",
-    "temporality": "2003",
     "mainActors": ["Choi Ji-woo", "Kwon Sang-woo"],
-    "awards": ["Ninguno"], // Dejar vacío si no ha ganado ningún premio
-    "budget": "No disponible",
+    "awards": [], // Dejar vacío si no ha ganado ningún premio
     "criticRating": "75%",
     "audienceRating": "89%"
   }
@@ -490,10 +463,8 @@ export default [
   "trailerUrl": "https://www.youtube.com/watch?v=8GYGkdcCIjM",
   "facts": {
     "releaseDate": "5 de enero de 2009",
-    "temporality": "2009",
     "mainActors": ["Ku Hye-sun", "Lee Min-ho"],
-    "awards": ["Ninguno"], // Dejar vacío si no ha ganado ningún premio
-    "budget": "No disponible",
+    "awards": [], // Dejar vacío si no ha ganado ningún premio
     "criticRating": "69%",
     "audienceRating": "88%"
   }

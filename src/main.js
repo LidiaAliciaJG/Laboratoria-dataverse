@@ -1,4 +1,4 @@
-import {filterData,sortBy} from './dataFunctions.js';
+import {filterData,sortData} from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
@@ -18,30 +18,84 @@ const main = () => {
 }
 main();
 
+const original=[...data];
+
 console.log(document.querySelector("ul"));
 
-const getvalue= document.getElementById("type-select");
-getvalue.addEventListener("change", function() {
-  let filterBy="type";
-  let value=getvalue.value;
+const filterType= document.getElementById("type-select");
+filterType.addEventListener("change", function() {
+  let filterBy=filterType.name;
+  filterState.filterByType=filterBy;
+  let value=filterType.value;
+  filterState.filterByTypeValue=value;
   let renderFilter=filterData(data,filterBy,value);
-  console.log("elección:"+filterBy,value,renderFilter);
-  renderData(renderFilter);
+  if (filterState.filterByDate=="") {
+    renderData(renderFilter);
+  } else {
+    let filterBy=filterState.filterByDate;
+    let value=filterState.filterByDateValue;
+    let renderFilter2=filterData(renderFilter,filterBy,value);
+    renderData(renderFilter2);
+  }
 });
 
-const getfilter= document.getElementById("temporality-select");
-getfilter.addEventListener("change", function() {
-  let filterBy=getfilter.name;
-  let value=getfilter.value;
+const filterDate= document.getElementById("temporality-select");
+filterDate.addEventListener("change", function() {
+  let filterBy=filterDate.name;
+  filterState.filterByDate=filterBy;
+  let value=filterDate.value;
+  filterState.filterByDateValue=value;
   let renderFilter=filterData(data,filterBy,value);
-  console.log("elección: filterby:"+filterBy,"value: "+value,"render:"+renderFilter);
-  renderData(renderFilter);
+  if (filterState.filterByType=="") {
+    renderData(renderFilter);
+  } else {
+    let filterBy=filterState.filterByType;
+    let value=filterState.filterByTypeValue;
+    let renderFilter2=filterData(renderFilter,filterBy,value);
+    renderData(renderFilter2);
+  }
 });
 
 // Selecciona el elemento select
-const filterSelect = document.getElementById("sort-select");
-filterSelect.addEventListener("change", function() { // Agrega un event listener para el cambio en el menú desplegable
-  const sortOrder = filterSelect.value; // Obtiene el valor seleccionado del menú desplegable
-  let sortedData = sortBy(data, sortOrder); // Llama a la función de ordenamiento
-  renderData(sortedData);
+const sortName = document.getElementById("sort-select");
+sortName.addEventListener("change", function() { // Agrega un event listener para el cambio en el menú desplegable
+  const sortOrder = sortName.value; // Obtiene el valor seleccionado del menú desplegable
+  filterState.sortOrder=sortOrder;
+  let sortBy = sortName.name;
+  let sortedData = sortBy(data,sortBy,sortOrder); // Llama a la función de ordenamiento
+  if (filterState.filterByType=="" && filterState.filterByDate=="") {
+    renderData(sortedData);
+  } else {
+    let filterByType=filterState.filterByType;
+    let valueType=filterState.filterByTypeValue;
+    let renderFilterType=filterData(data,filterByType,valueType);
+    let filterByDate=filterState.filterByDate;
+    let valueDate=filterState.filterByDateValue;
+    let renderFilterLast=filterData(renderFilterType,filterByDate,valueDate);
+    renderData(renderFilterLast);
+  }
 });
+
+const btnClear = document.getElementById("button-clear");
+btnClear.addEventListener("click", function () {
+  resetFilters();
+  console.log(filterState);
+  renderData(original);
+});
+
+const filterState = {
+  filterByType: "",
+  filterByTypeValue: "",
+  filterByDate: "",
+  filterByDateValue: "",
+  sortOrder: "",
+};
+
+const resetFilters = () => {
+  filterState.filterByType="";
+  filterState.filterByDate="";
+  filterState.sortOrder="none";
+  filterType.value = "";
+  filterDate.value = "";
+  sortName.value = "none";
+};

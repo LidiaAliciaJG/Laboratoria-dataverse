@@ -4,16 +4,20 @@
     <meta charset="utf-8">
     <title>PelisInfo</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
   </head>
   <body>
     <header>
       <h1>PelisInfo</h1>
     </header>
 
-    <button data-testid="button-clear">Limpiar filtro</button>
+    <button data-testid="button-clear" id="button-clear">Limpiar filtro</button>
     
     <label for="type-select">Categorías:</label>
-    <select name="categorias" id="type-select" data-testid="select-filter">
+    <select name="temporality" id="type-select" data-testid="select-filter">
       <option value="">Elegir una opcion</option>
       <option value="Terror">Terror</option>
       <option value="Comedia Romántica">Comedia Romántica</option>
@@ -29,9 +33,8 @@
     </select>
 
     <label for="sort-select">Ordenar por:</label>
-
-    <select name="Ordenar" id="sort-select" data-testid="select-sort">
-      <option value="">Elige una opcion</option>
+    <select name="name" id="sort-select" data-testid="select-sort">
+      <option value="none">Elige una opcion</option>
       <option value="asc"> A - Z</option>
       <option value="desc"> Z - A</option>
     </select>

@@ -13,8 +13,14 @@ const renderData = (dataset) => {
     });
 }
 
+const dataNum = document.querySelector("p");
+const renderNum = (num) => {
+  dataNum.innerHTML="Número de películas: "+num;
+}
+
 const main = () => {
     renderData(data);
+    renderNum(data.length);
 }
 main();
 
@@ -31,11 +37,13 @@ filterType.addEventListener("change", function() {
   let renderFilter=filterData(data,filterBy,value);
   if (filterState.filterByDate=="") {
     renderData(renderFilter);
+    renderNum(renderFilter.length)
   } else {
     let filterBy=filterState.filterByDate;
     let value=filterState.filterByDateValue;
     let renderFilter2=filterData(renderFilter,filterBy,value);
     renderData(renderFilter2);
+    renderNum(renderFilter2.length)
   }
 });
 
@@ -48,11 +56,13 @@ filterDate.addEventListener("change", function() {
   let renderFilter=filterData(data,filterBy,value);
   if (filterState.filterByType=="") {
     renderData(renderFilter);
+    renderNum(renderFilter.length)
   } else {
     let filterBy=filterState.filterByType;
     let value=filterState.filterByTypeValue;
     let renderFilter2=filterData(renderFilter,filterBy,value);
     renderData(renderFilter2);
+    renderNum(renderFilter2.length)
   }
 });
 
@@ -81,6 +91,7 @@ btnClear.addEventListener("click", function () {
   resetFilters();
   console.log(filterState);
   renderData(original);
+  renderNum(data.length);
 });
 
 const filterState = {

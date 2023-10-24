@@ -62,7 +62,7 @@ sortName.addEventListener("change", function() { // Agrega un event listener par
   const sortOrder = sortName.value; // Obtiene el valor seleccionado del menú desplegable
   filterState.sortOrder=sortOrder;
   let sortBy = sortName.name;
-  let sortedData = sortBy(data,sortBy,sortOrder); // Llama a la función de ordenamiento
+  let sortedData = sortData(data,sortBy,sortOrder); // Llama a la función de ordenamiento
   if (filterState.filterByType=="" && filterState.filterByDate=="") {
     renderData(sortedData);
   } else {

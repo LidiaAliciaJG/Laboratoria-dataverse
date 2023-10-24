@@ -18,7 +18,7 @@ export const filterData = (data, filterBy, value) => {
 };
 
 const unSort=Array.from(dataset);
-export const sortBy = (data, sortBy, sortOrder) => {
+export const sortData = (data, sortBy, sortOrder) => {
   if (sortBy==="name") {
     if (sortOrder === "asc") {
       // Ordena de la A a la Z basándose en el nombre de la película

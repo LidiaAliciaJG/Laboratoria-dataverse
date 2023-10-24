@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>PelisInfo</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-  </head>
-  <body>
-    <header>
-      <h1>PelisInfo</h1>
-    </header>
-    <div class="contenedor">
+
+<head>
+  <meta charset="utf-8">
+  <title>PelisInfo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <h1>PelisInfo</h1>
+  </header>
+  <div class="contenedor">
     <button data-testid="button-clear" id="button-clear">Limpiar filtro</button>
-    
+
     <label for="type-select">Categorías:</label>
     <select name="type" id="type-select" data-testid="filter-type">
       <option value="">Elegir una opcion</option>
@@ -27,9 +29,9 @@
 
     <label for="temporality-select">Filtrar por:</label>
     <select name="temporality" id="temporality-select" data-testid="filter-temporality">
-        <option value="">Año de estreno</option>
-        <option value="actual">2010-actualidad</option>
-        <option value="anterior">1980-2010</option>
+      <option value="">Año de estreno</option>
+      <option value="actual">2010-actualidad</option>
+      <option value="anterior">1980-2010</option>
     </select>
 
     <label for="sort-select">Ordenar por:</label>
@@ -38,22 +40,23 @@
       <option value="asc"> A - Z</option>
       <option value="desc"> Z - A</option>
     </select>
-    </div>
+  </div>
 
-    <main>
-      <h2>Introducción</h2>
-      <p></p>
-    </main>
+  <main>
+    <h2>Introducción</h2>
+    <p></p>
+  </main>
 
-    <section id="root">
-      <ul>
-      </ul>
-    </section>
-    <div class="footer">
+  <section id="root">
+    <ul>
+    </ul>
+  </section>
+  <div class="footer">
     <footer>
-      <p>Creado por Carla Campaña & Lidia A. Julián 2023</p>
+      <p>Creado por Carla Campaña &amp; Lidia A. Julián 2023</p>
     </footer>
   </div>
-    <script src="main.js" type="module"></script>
-  </body>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

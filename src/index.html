@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>PelisInfo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  </head>
+  <body>
+    <header>
+      <h1>PelisInfo</h1>
+    </header>
 
-<head>
-  <meta charset="utf-8">
-  <title>PelisInfo</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <header class="Encabezado" id="Encabezado">
-    <h1 class="Logo" id="Título">PelisInfo </h1>
-  </header>
-
-    <button data-testid="button-clear">Limpiar filtro</button>
-
-    <button id="Infantil">Infantiles</button>
+    <div class="contenedor">
+    <button data-testid="button-clear" id="button-clear">Limpiar filtro</button>
     
     <label for="type-select">Categorías:</label>
-
-      <select name="categorias" id="type-select">
+    <select name="type" id="type-select" data-testid="filter-type">
       <option value="">Elegir una opcion</option>
       <option value="Terror">Terror</option>
       <option value="Comedia Romántica">Comedia Romántica</option>
@@ -26,41 +26,37 @@
       <option value="Kdrama">Kdrama</option>
     </select>
 
-    <label for="filter-select">Filtrar por:</label>
-
-    <select name="filtros" id="filter-select">
-        <option value="">Elige una opcion</option>
-      <optgroup label="Año de estreno" data-content="temporality">
+    <label for="temporality-select">Filtrar por:</label>
+    <select name="temporality" id="temporality-select" data-testid="filter-temporality">
+        <option value="">Año de estreno</option>
         <option value="actual">2010-actualidad</option>
         <option value="anterior">1980-2010</option>
-      </optgroup>
-      <optgroup label="Presupuesto" data-content="budget">
-        <option value="No disponible">No disponible</option>
-      </optgroup>
-      <optgroup label="Calificación" data-content="criticRating">
-        <option value="criticRating">Mejor Calificación</option>
-      </optgroup>
     </select>
 
-  <label for="sort-select">Ordenar por:</label>
-
-    <select name="Ordenar" id="sort-select">
-      <option value="">Elige una opcion</option>
+    <label for="sort-select">Ordenar por:</label>
+    <select name="name" id="sort-select" data-testid="select-sort">
+      <option value="none">Elige una opcion</option>
       <option value="asc"> A - Z</option>
       <option value="desc"> Z - A</option>
     </select>
+    </div>
     
     <main>
       <h2>Introducción</h2>
+      <p></p>
     </main>
 
-    <ul>
-    </ul>
+    <section id="root">
+      <ul>
+      </ul>
+    </section>
 
-  <footer>
-    <p>Creado por Carla Campaña & Lidia A. Julián 2023</p>
-  </footer>
-  <script src="main.js" type="module"></script>
-</body>
+    <div class="footer">
+    <footer>
+      <p>Creado por Carla Campaña & Lidia A. Julián 2023</p>
+    </footer>
+  </div>
 
+    <script src="main.js" type="module"></script>
+  </body>
 </html>

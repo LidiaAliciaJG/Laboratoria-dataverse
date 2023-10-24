@@ -3,8 +3,8 @@ export const renderItems = (data) => {
   const itemList = document.createElement("li");
   const itemContainer = document.createElement("dl");
   itemContainer.classList.add("card");
-
-  itemContainer.innerHTML = `
+  
+  itemContainer.innerHTML=`
         <img src=${data.imageUrl} alt=${data.name} />
         <dt>Nombre:</dt><dd itemprop="name">${data.name}</dd>
         <dt>Categoría:</dt><dd itemprop="type">${data.type}</dd>
@@ -17,9 +17,8 @@ export const renderItems = (data) => {
         <dt>Calificación de la Audiencia:</dt><dd itemprop="audienceRating">${data.facts.audienceRating}</dd>
       `
 
-  itemContainer.setAttribute("itemscope", "");
-  itemContainer.setAttribute("itemtype", "películas");
-  itemList.setAttribute("itemtype", "");
+  itemContainer.setAttribute("itemscope","");
+  itemContainer.setAttribute("itemtype","películas");
 
   itemList.appendChild(itemContainer);
 

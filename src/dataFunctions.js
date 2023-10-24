@@ -1,5 +1,5 @@
 // Estas funciones son ejemplos, aquí puedes desarrollar tus propias funciones. FILTRO ORDENAMIENTO 
-import dataset from './data/dataset.js';
+import data from './data/dataset.js';
 
 export const filterData = (data, filterBy, value) => {
   function filtrado(data) {
@@ -31,3 +31,6 @@ export const sortData = (data, sortBy, sortOrder) => {
     }
   }
 };
+
+
+

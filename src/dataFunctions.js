@@ -31,3 +31,14 @@ export const sortData = (data, sortBy, sortOrder) => {
     }
   }
 };
+
+export const computeStats = (data) => {
+  //Cantidad de películas
+  let numMovies = data.reduce(count => count += 1, 0);
+  //Promedio de aprobación de la crítica
+  let dataCritic = data.map(element => parseInt(element.facts.criticRating));
+  let sumCritic = (dataCritic.reduce((sum, element) => sum + element, 0));
+  let promCritic = sumCritic / numMovies
+  let criticMovies = Math.round(promCritic*10)/10;
+  return {numMovies, criticMovies};
+};

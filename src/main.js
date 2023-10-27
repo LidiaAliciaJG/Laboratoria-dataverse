@@ -1,9 +1,7 @@
-import { filterData, sortData } from './dataFunctions.js';
+import { computeStats, filterData, sortData } from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
-
-console.log(data);
 
 const dataList = document.querySelector("ul");
 const renderData = (dataset) => {
@@ -14,19 +12,17 @@ const renderData = (dataset) => {
 };
 
 const dataNum = document.querySelector("p");
-const renderNum = (num) => {
-  dataNum.innerHTML = "Número de películas: " + num;
+const renderStats = (data) => {
+  dataNum.innerHTML = "Número de películas: " +computeStats(data).numMovies + "<br>Promedio de aprobación: " + computeStats(data).criticMovies+"%";
 };
 
 const main = () => {
   renderData(data);
-  renderNum(data.length);
+  renderStats(data);
 };
 main();
 
 const original = [...data];
-
-console.log(document.querySelector("ul"));
 
 const filterType = document.getElementById("type-select");
 filterType.addEventListener("change", function () {
@@ -37,13 +33,14 @@ filterType.addEventListener("change", function () {
   const renderFilter = filterData(data, filterBy, value);
   if (filterState.filterByDate === "") {
     renderData(renderFilter);
-    renderNum(renderFilter.length);
+    renderStats(renderFilter);
+
   } else {
     const filterBy = filterState.filterByDate;
     const value = filterState.filterByDateValue;
     const renderFilter2 = filterData(renderFilter, filterBy, value);
     renderData(renderFilter2);
-    renderNum(renderFilter2.length);
+    renderStats(renderFilter2);
   }
 });
 
@@ -56,13 +53,13 @@ filterDate.addEventListener("change", function () {
   const renderFilter = filterData(data, filterBy, value);
   if (filterState.filterByType === "") {
     renderData(renderFilter);
-    renderNum(renderFilter.length);
+    renderStats(renderFilter);
   } else {
     const filterBy = filterState.filterByType;
     const value = filterState.filterByTypeValue;
     const renderFilter2 = filterData(renderFilter, filterBy, value);
     renderData(renderFilter2);
-    renderNum(renderFilter2.length);
+    renderStats(renderFilter2);
   }
 });
 
@@ -89,9 +86,8 @@ sortName.addEventListener("change", function () {
 const btnClear = document.getElementById("button-clear");
 btnClear.addEventListener("click", function () {
   resetFilters();
-  console.log(filterState);
   renderData(original);
-  renderNum(data.length);
+  renderStats(data);
 });
 
 const filterState = {

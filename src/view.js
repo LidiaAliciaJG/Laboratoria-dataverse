@@ -2,12 +2,12 @@ export const renderItems = (data) => {
   // Aquí comienza tu código y puedes retornar lo que tu necesites GENERACION DINAMICA
   const list = document.createElement("ul");
   data.forEach(element => {
-      
-  const itemList = document.createElement("li");
-  const itemContainer = document.createElement("dl");
+
+    const itemList = document.createElement("li");
+    const itemContainer = document.createElement("dl");
     itemContainer.classList.add("card");
-  
-  itemContainer.innerHTML=`
+
+    itemContainer.innerHTML = `
         <img src=${element.imageUrl} alt=${element.name} />
         <dt>Nombre:</dt><dd itemprop="name">${element.name}</dd>
         <dt>Categoría:</dt><dd itemprop="type">${element.type}</dd>
@@ -20,12 +20,13 @@ export const renderItems = (data) => {
         <dt>Calificación de la Audiencia:</dt><dd itemprop="audienceRating">${element.facts.audienceRating}</dd>
       `
 
-  itemContainer.setAttribute("itemscope","");
-  itemContainer.setAttribute("itemtype","películas");
+    itemContainer.setAttribute("itemscope", "");
+    itemContainer.setAttribute("itemtype", "películas");
+    itemList.setAttribute("itemtype","")
 
-  itemList.appendChild(itemContainer);
-  list.appendChild(itemList)
-});
-  
+    itemList.appendChild(itemContainer);
+    list.appendChild(itemList)
+  });
+
   return list;
 };

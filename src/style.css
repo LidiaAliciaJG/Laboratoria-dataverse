@@ -32,6 +32,9 @@ label[for="sort-select"]{
   margin-left: 10px;
   font-weight: 500;
 }
+select {
+  color: blue;
+}
 
 #button-clear {
   margin-left: 15px;

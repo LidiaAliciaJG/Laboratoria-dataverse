@@ -1,4 +1,4 @@
-import { filterData, sortData } from './dataFunctions.js';
+import { computeStats, filterData } from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
@@ -14,22 +14,22 @@ const dataList = document.querySelector("#root");
 
 
 const dataNum = document.querySelector("p");
-const renderNum = (num) => {
-  dataNum.innerHTML = "Número de películas: " + num;
+const renderStats = (data) => {
+  dataNum.innerHTML = "Número de películas: " + computeStats(data).numMovies + "<br>Promedio de aprobación: " + computeStats(data).criticMovies + "%";
 };
 
 const main = () => {
-   renderNum(data.length);
+  renderStats(data);
+  //renderData(data);
 };
 main();
 
-const original = [...data];
-
-console.log(document.querySelector("ul"));
+//const original = [...data];
 
 const filterType = document.getElementById("type-select");
 filterType.addEventListener("change", function () {
   dataList.innerHTML=""
+  //dataList.innerHTML="";
   const filterBy = filterType.name;
   filterState.filterByType = filterBy;
   const value = filterType.value;
@@ -42,8 +42,8 @@ filterType.addEventListener("change", function () {
     const filterBy = filterState.filterByDate;
     const value = filterState.filterByDateValue;
     const renderFilter2 = filterData(renderFilter, filterBy, value);
-    renderItems(renderFilter2);
-    renderNum(renderFilter2.length);
+    //renderData(renderFilter2);
+    renderStats(renderFilter2);
   }
 });
 
@@ -56,14 +56,14 @@ filterDate.addEventListener("change", function () {
   filterState.filterByDateValue = value;
   const renderFilter = filterData(data, filterBy, value);
   if (filterState.filterByType === "") {
-    renderItems(renderFilter);
-    renderNum(renderFilter.length);
+    //renderData(renderFilter);
+    renderStats(renderFilter);
   } else {
     const filterBy = filterState.filterByType;
     const value = filterState.filterByTypeValue;
     const renderFilter2 = filterData(renderFilter, filterBy, value);
-    renderItems(renderFilter2);
-    renderNum(renderFilter2.length);
+    //renderData(renderFilter2);
+    renderStats(renderFilter2);
   }
 });
 
@@ -73,8 +73,8 @@ sortName.addEventListener("change", function () {
   dataList.innerHTML=""
   const sortOrder = sortName.value;
   filterState.sortOrder = sortOrder;
-  const sortBy = sortName.name;
-  const sortedData = sortData(data, sortBy, sortOrder);
+  //const sortBy = sortName.name;
+  //const sortedData = sortData(data, sortBy, sortOrder);
   if (filterState.filterByType === "" && filterState.filterByDate === "") {
     renderItems(sortedData);
   } else {
@@ -91,9 +91,8 @@ sortName.addEventListener("change", function () {
 const btnClear = document.getElementById("button-clear");
 btnClear.addEventListener("click", function () {
   resetFilters();
-  console.log(filterState);
-  renderItems(original);
-  renderNum(data.length);
+  //renderData(original);
+  renderStats(data);
 });
 
 const filterState = {

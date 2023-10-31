@@ -12,12 +12,11 @@
 </head>
 
 <body>
-  <header>
+  <header id="header">
     <h1>PelisInfo</h1>
   </header>
-  <div class="contenedor">
-    <button data-testid="button-clear" id="button-clear">Limpiar filtro</button>
 
+  <nav>
     <label for="type-select">Categorías:</label>
     <select name="type" id="type-select" data-testid="filter-type">
       <option value="">Elegir una opcion</option>
@@ -40,20 +39,22 @@
       <option value="asc"> A - Z</option>
       <option value="desc"> Z - A</option>
     </select>
+
+    <button data-testid="button-clear" id="button-clear">Limpiar filtro</button>
+  </nav>
+
+  <div id="estadisticas">
+    <p></p>
   </div>
 
-  <main>
-    <h2>Introducción</h2>
-    <p></p>
-  </main>
-
   <section id="root">
-     </section>
-  <div class="footer">
+  </section>
+  
+  
     <footer>
       <p>Creado por Carla Campaña &amp; Lidia A. Julián 2023</p>
     </footer>
-  </div>
+  
   <script src="main.js" type="module"></script>
 </body>
 

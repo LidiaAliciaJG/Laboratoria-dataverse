@@ -2,9 +2,9 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Consideraciones generales](#3-consideraciones-generales)
+
+* [1. Resumen del proyecto](#1-resumen-del-proyecto)
+* [2. Creación de Historias de usuario](#2-Creación-de-Historias-de-usuario)
 * [4. Funcionalidades](#4-funcionalidades)
 * [5. Consideraciones técnicas](#5-consideraciones-técnicas)
 * [6. Criterios de aceptación mínimos del proyecto](#6-criterios-de-aceptación-mínimos-del-proyecto)
@@ -15,180 +15,39 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Resumen del proyecto
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+Este sitio web exhibe un conjunto de datos, en este caso, películas de diversos géneros, diseñado para satisfacer las necesidades de los usuarios. Permite la visualización de datos, filtrado, clasificación y cálculo de estadísticas. Para su desarrollo, se emplearon herramientas de inteligencia artificial, como ChatGPT, y Figma para el diseño.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-las usuarias, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+## 2. Creación de Historias de usuario
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por las
-usuarias, al lado derecho.
+Pensando en las necesidades de usuario, se plantearon las siguientes preguntas
+¿Quiénes son las principales usuarias del producto?
+¿Cuáles son los objetivos de estas usuarias en relación con el producto?
+¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
+¿Cuándo utilizan o utilizarían el producto?
 
-![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
+Una vez solventadas estas dudas se prosigue con la generacion de datos con ayuda de ChatGPT.
 
-## 2. Resumen del proyecto
+## 3. Generación de Datos
+la estructura de cada objeto debe ser la siguiente:
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que vas a generar con [prompting](https://www.itmadrid.com/que-es-un-prompt-en-inteligencia-artificial-ia/).
-Esta página web se adecuará a lo que descubras que tu usuaria
-necesita.
+* `id`: Identificador único (no pueden haber dos elementos con el mismo `id`).
+  Debe ser un string de no más de 32 characteres, en minúscula, compuesto solo
+  por letras, números, underscore (`_`) o guión (`-`). Por ejemplo: `"ada-lovelace"`.
+* `name`: El nombre del personaje, país, película, etc.
+* `shortDescription`: Descripción corta del elemento. Esta descripción deberá
+  tener como máximo 20 palabras.
+* `description`: Descripción extendida del elemento. Esta descripción deberá
+  tener entre 80 y 100 palabras. Al momento de mostrar este dato en pantalla
+  puedes truncarlo para que no ocupe tanto espacio.
+* `imageUrl`: URL de la imagen. Esta imagen será generada a través de alguna
+  herramienta basada en inteligencia artifical. Una vez generada la imagen,
+  y guardada en tu repo, deberás agregar la URL en este campo.
+* `facts`: Un objeto con al menos **3** "hechos" o "info" sobre este elemento, en
+  formato `"nombre": "valor"`
 
-Además, en este proyecto utilizarás herramientas de
-[inteligencia artificial](https://es.wikipedia.org/wiki/Inteligencia_artificial)
-como [ChatGPT](https://openai.com/chatgpt), [ExplainDev](https://explain.dev/),
-entre otras para generar un set de datos en un archivo javascript.
-
-El propósito de generar los datos en esta manera es brindarte la oportunidad de
-adentrarte en el empleo de herramientas impulsadas por la inteligencia
-artificial, así como en [técnicas de
-prompting](https://learnprompting.org/es/docs/intro).
-
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y calcular alguna estadística**. Con estadística
-nos referimos a distintos cálculos que puedes hacer con los datos para mostrar
-información aún más relevante a las usuarias (promedio, el valor máximo
-o mínimo, etc).
-
-## 3. Consideraciones generales
-
-* Este proyecto se debe resolver en duplas.
-* El rango de tiempo estimado para completar el proyecto es de 3 a 4 Sprints.
-* El tiempo estimado que deberías dedicar a la [generación de los datos](#generar-los-datos)
-  es de máximo un sprint. Además, al final del proyecto deberás presentar
-  un [screenshot del prompt utilizado](#prompt-utilizado).
-* Si ves que te va a tomar más tiempo,
-  deberás utilizar los datos de ejemplo que los vas a encontrar en
-  esta ruta: `./src/data/dataset.js`.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-
-## 4. Funcionalidades
-
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y calcular alguna estadística**.
-
-Aquí definimos en más detalle las funcionalidades mínimas que debe tener:
-
-* La aplicación debe permitir a la usuaria ver los items de la data en una visualización,
-  que puede ser [tipo tarjetas](http://www.uxables.com/diseno-ux-ui/que-es-y-como-disenar-una-card/)
-  o cualquier otra forma que tú decidas como la adecuada (pero desde aquí
-  referimos a los items como "tarjetas"). **Cada una de las tarjetas debe estar
-  contenida en un elemento `<li>` y estos a su vez contenido en
-  un elemento `<ul>`.**
-
-* El elemento `<ul>` deberá ser hijo de un elemento con atributo _id_
-  de valor "root". **Este es un paso importante para que tu**
-  **aplicación tenga la estructura requerida**
-
-* Las tarjetas deben resaltar los valores de las propiedades de la data que
-  le interesaría a la usuaria ver. Por ejemplo: nombre, fecha, imagen, etc.
-  **Si vas a filtrar u ordenar por una propiedad, la tarjeta tiene que mostrar
-  el valor de esta propiedad a la usuaria.**
-
-* La interfaz debe estructurar semánticamente la data usando el estándar [microdatos](https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata).
-  Es obligatorio usar al menos los atributos [`itemscope`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemscope),
-  [`itemtype`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemtype)
-  y el atributo [`itemprop`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/itemprop).
-
-  Por ejemplo, la siguiente data correspondiente a Ada Lovelace:
-
-  ```json
-    {
-      "id": "ada-lovelace",
-      "name": "Ada Lovelace",
-      "shortDescription": "Pionera de la informática, fue la primera programadora.",
-      "description": "Una visionaria del siglo XIX ...",
-      "imageUrl": "URL_DE_LA_IMAGEN_GENERADA",
-      "facts": {
-        "yearOfBirth": 1843,
-        "placeOfBirth": "London, England",
-        "mainField": "Computer Science",
-      }
-    }
-  ```
-
-  puede ser estructurada semánticamente en HTML como:
-
-  ```html
-  <dl itemscope itemtype="WomenInTech">
-    <img src="URL_DE_LA_IMAGEN_GENERADA" alt="Ada Lovelace" />
-    <dt>Nombre:</dt><dd itemprop="name">Ada Lovelace</dd>
-    <dt>Descripción:</dt><dd itemprop="description">Pionera de la informática, fue la primera programadora.</dd>
-    <dt>Año de nacimiento:</dt><dd itemprop="yearOfBirth">1843</dd>
-    <dt>Lugar de nacimiento:</dt><dd itemprop="placeOfBirth">London, England</dd>
-    <dt>Campo de desempeño:</dt><dd itemprop="mainField">Computer Science</dd>
-  </dl>
-  ```
-
-* La aplicación debe calcular y visualizar una estadística de la data. Puede
-  ser una propiedad computada de cada item, como una propiedad adicional
-  (por ejemplo, el índice de masa corporal de cada pokemon) o unas estadísticas
-  de la data completa (por ejemplo, total de personas nacidas en los años 80s).
-
-* La aplicación debe permitir a la usuaria filtrar la data. Deberás usar
-  un elemento [`<select>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select)
-  con [un atributo de datos](https://developer.mozilla.org/es/docs/Learn/HTML/Howto/Use_data_attributes)
-  `data-testid="select-filter"`, y un atributo `name` con el nombre
-  de la propiedad por la que filtrará (por ejemplo, si vas a filtrar por "type",
-  el `<select>` tendrá  `name="type"`). Los `<option>` de este `<select>` deberán
-  tener en el atributo `value` el valor del filtro (por ejemplo, si vas a filtrar
-  por type "fire" sería `<option value="fire">Fire</option>`).
-
-* La aplicación debe permitir a la usuaria ordenar la data.
-  - Tendrá al menos un control `<select>` para ordenar.
-  - Si usas solo un control `<select>`, debe tener
-    [un atributo de datos](https://developer.mozilla.org/es/docs/Learn/HTML/Howto/Use_data_attributes)
-    `data-testid="select-sort"` y un atributo `name` con el nombre de la
-    propiedad por la que ordenará. (por ejemplo, si vas a ordenar por
-    "num" seria `name="num"`). Este `<select>` tendrá dos [`<option>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/option)
-    con `value` `asc` y `desc`, para ordenar ascendente y descendente la data
-    respectivamente (por ejemplo, `<option value="asc">A - Z</option>`).
-  - Una alternativa es ofrecer la usuaria un ordenamiento mas complejo.
-    Podrías implementar ordenar por varios propiedades. En este caso sería con
-    un `<select>` con un atributo de datos `data-testid="select-sort"`, y que
-    contiene hijos `<option>` con un `value` del nombre de la propiedad con
-    cual vas a ordenar. (Por ejemplo, `<option value="name">Nombre</option>`).
-    También, necesitarás otro control (`<radio>`,`<select>`, etc.) para decir
-    que el ordenamiento es ascendente o descendente. Este control secundaria
-    tendrá un atributo `name="sort-order"`, y tiene values `asc` y `desc`.
-
-* Las funcionalidades de ordenar deben operar sobre la data filtrada.
-  Por ejemplo, si filtro los pokemones de tipo fuego y luego los ordeno por
-  nombre ascendentemente, la aplicación deberá mantener el filtro aplicado y
-  ordenar los pokemones de tipo fuego.
-
-* La aplicación debe permitir a la usuaria reiniciar la aplicación, limpiando
-  filtros y ordenamiento, con un `<button>` con un atributo de datos
-  `data-testid="button-clear"`.
-
-* Las operaciones de filtrar, ordenar, limpiar, etc. no deben recargar
-  la página, si no que deben agregar el contenido en una manera
-  dinámica via javascript.
-
-* La aplicación será _responsive_, es decir, debe visualizarse sin problemas
-  desde distintos tamaños de pantallas: móviles, tablets y desktops.
-
-Los siguientes wireframes, son ejemplos de una interfaz que puede cumplir con esta
-funcionalidad. Como podrás ver, estos diseños cumplen con la metodología
-[Mobile First](https://developer.mozilla.org/es/docs/Glossary/Mobile_First), la misma
-que te recomendamos utilizar en todos tus proyectos:
-
-Diseño Mobile:
-
-* [Wireframe mobile 1](https://github.com/Laboratoria/curriculum/assets/123121338/54711bb7-cb05-448e-b677-3cbd9bf13c14)
-* [Wireframe mobile 2](https://github.com/Laboratoria/curriculum/assets/123121338/bf96d3ce-150f-47a2-a605-2efac2e0497b)
-
-Diseño Desktop:
-
-* [Wireframe desktop 1](https://github-production-user-asset-6210df.s3.amazonaws.com/92090/261137084-1625aeb8-883c-4b79-86da-5fab34fa5b88.png)
-* [Wireframe desktop 2](https://github-production-user-asset-6210df.s3.amazonaws.com/92090/261137087-6cef16bc-643a-4d6d-bc1c-e0daaeb21c88.png)
+(Fotos del Prompting de generacion de datos)
 
 ## 5. Consideraciones técnicas
 
@@ -459,23 +318,7 @@ preguntarle en que año fue fundado o cual es su capital, etc.
 Tenlo en cuenta a la hora de generar tu dataset.
 
 Esta data la vas a guardar en un archivo javascript. Este archivo,
-debe exportar un arreglo con 24 objetos. Y la estructura de cada objeto
-debe ser la siguiente:
-
-* `id`: Identificador único (no pueden haber dos elementos con el mismo `id`).
-  Debe ser un string de no más de 32 characteres, en minúscula, compuesto solo
-  por letras, números, underscore (`_`) o guión (`-`). Por ejemplo: `"ada-lovelace"`.
-* `name`: El nombre del personaje, país, película, etc.
-* `shortDescription`: Descripción corta del elemento. Esta descripción deberá
-  tener como máximo 20 palabras.
-* `description`: Descripción extendida del elemento. Esta descripción deberá
-  tener entre 80 y 100 palabras. Al momento de mostrar este dato en pantalla
-  puedes truncarlo para que no ocupe tanto espacio.
-* `imageUrl`: URL de la imagen. Esta imagen será generada a través de alguna
-  herramienta basada en inteligencia artifical. Una vez generada la imagen,
-  y guardada en tu repo, deberás agregar la URL en este campo.
-* `facts`: Un objeto con al menos **3** "hechos" o "info" sobre este elemento, en
-  formato `"nombre": "valor"`, por ejemplo:
+debe exportar un arreglo con 24 objetos. Y , por ejemplo:
 
   ```json
   "facts": {

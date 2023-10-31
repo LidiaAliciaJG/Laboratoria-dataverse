@@ -1,45 +1,45 @@
-import { computeStats, filterData, sortData } from './dataFunctions.js';
+import { computeStats, filterData } from './dataFunctions.js';
 import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
 
-const dataList = document.querySelector("ul");
-const renderData = (dataset) => {
-  dataList.innerHTML = "";
-  dataset.forEach(element => {
-    dataList.appendChild(renderItems(element));
-  });
-};
+const dataList = document.querySelector("#root");
+//const renderData = (dataset) => {
+//dataList.innerHTML = "";
+dataList.appendChild(renderItems(data));
+//renderStats(dataset);
+//}
 
 const dataNum = document.querySelector("p");
 const renderStats = (data) => {
-  dataNum.innerHTML = "Número de películas: " +computeStats(data).numMovies + "<br>Promedio de aprobación: " + computeStats(data).criticMovies+"%";
+  dataNum.innerHTML = "Número de películas: " + computeStats(data).numMovies + "<br>Promedio de aprobación: " + computeStats(data).criticMovies + "%";
 };
 
 const main = () => {
-  renderData(data);
   renderStats(data);
+  //renderData(data);
 };
 main();
 
-const original = [...data];
+//const original = [...data];
 
 const filterType = document.getElementById("type-select");
 filterType.addEventListener("change", function () {
+  //dataList.innerHTML="";
   const filterBy = filterType.name;
   filterState.filterByType = filterBy;
   const value = filterType.value;
   filterState.filterByTypeValue = value;
   const renderFilter = filterData(data, filterBy, value);
   if (filterState.filterByDate === "") {
-    renderData(renderFilter);
+    //renderData(renderFilter);
     renderStats(renderFilter);
 
   } else {
     const filterBy = filterState.filterByDate;
     const value = filterState.filterByDateValue;
     const renderFilter2 = filterData(renderFilter, filterBy, value);
-    renderData(renderFilter2);
+    //renderData(renderFilter2);
     renderStats(renderFilter2);
   }
 });
@@ -52,13 +52,13 @@ filterDate.addEventListener("change", function () {
   filterState.filterByDateValue = value;
   const renderFilter = filterData(data, filterBy, value);
   if (filterState.filterByType === "") {
-    renderData(renderFilter);
+    //renderData(renderFilter);
     renderStats(renderFilter);
   } else {
     const filterBy = filterState.filterByType;
     const value = filterState.filterByTypeValue;
     const renderFilter2 = filterData(renderFilter, filterBy, value);
-    renderData(renderFilter2);
+    //renderData(renderFilter2);
     renderStats(renderFilter2);
   }
 });
@@ -68,25 +68,25 @@ const sortName = document.getElementById("sort-select");
 sortName.addEventListener("change", function () {
   const sortOrder = sortName.value;
   filterState.sortOrder = sortOrder;
-  const sortBy = sortName.name;
-  const sortedData = sortData(data, sortBy, sortOrder);
+  //const sortBy = sortName.name;
+  //const sortedData = sortData(data, sortBy, sortOrder);
   if (filterState.filterByType === "" && filterState.filterByDate === "") {
-    renderData(sortedData);
+    //renderData(sortedData);
   } else {
-    const filterByType = filterState.filterByType;
-    const valueType = filterState.filterByTypeValue;
-    const renderFilterType = filterData(data, filterByType, valueType);
-    const filterByDate = filterState.filterByDate;
-    const valueDate = filterState.filterByDateValue;
-    const renderFilterLast = filterData(renderFilterType, filterByDate, valueDate);
-    renderData(renderFilterLast);
+    //const filterByType = filterState.filterByType;
+    //const valueType = filterState.filterByTypeValue;
+    //const renderFilterType = filterData(data, filterByType, valueType);
+    //const filterByDate = filterState.filterByDate;
+    //const valueDate = filterState.filterByDateValue;
+    //const renderFilterLast = filterData(renderFilterType, filterByDate, valueDate);
+    //renderData(renderFilterLast);
   }
 });
 
 const btnClear = document.getElementById("button-clear");
 btnClear.addEventListener("click", function () {
   resetFilters();
-  renderData(original);
+  //renderData(original);
   renderStats(data);
 });
 

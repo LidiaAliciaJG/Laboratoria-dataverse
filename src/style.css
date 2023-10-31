@@ -1,12 +1,9 @@
 header {
-  background-color: white;
   padding: 10px 20px;
-  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  /* Agregar margen en la parte inferior del header */
 }
 
 h1 {
@@ -14,37 +11,34 @@ h1 {
   font-weight: 700;
 }
 
-main {
-  color: rgb(223, 210, 210);
-  margin: 0;
+.estadisticas {
+  margin-left: 30px;
   font-weight: 700;
 }
-.contenedor {
-  background-color: rgba(248, 240, 240, 0.614);
-  padding: 10px 20px;
-  /* Espacio alrededor del contenido */
-  border-radius: 15px;
+nav {
+  background-color: black;
+  padding: 25px 20px;
   display: flex;
   /* Para que el contenedor se ajuste al contenido */
   margin-bottom: 20px;
+  position: sticky;
+  top: 0;
 }
 
 label[for="type-select"],
 label[for="temporality-select"],
-label[for="sort-select"] {
+label[for="sort-select"]{
   margin-right: 10px;
   margin-left: 10px;
-  color: rgb(42, 28, 28);
   font-weight: 500;
 }
 
 #button-clear {
-  margin-right: 10px;
-  /* Agrega espacio entre el botón y la categoría */
+  margin-left: 15px;
 }
 
 body {
-  background-image: url("https://img.freepik.com/vector-premium/telon-fondo-cortinas-teatro-festivo-concierto-escenario-espectaculo-telon-fondo-entretenimiento_41737-368.jpg?w=740");
+  background-color: rgb(26, 26, 26);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -52,6 +46,7 @@ body {
   /* Ajusta el valor según tus preferencias */
   font-family: 'Fira Sans', sans-serif;
   font-weight: 400;
+  color: whitesmoke;
 }
 
 /* Estilo para la imagen de la película */
@@ -105,9 +100,8 @@ li {
   padding: 20px;
 }
 
-.footer {
-  background-color: rgba(255, 255, 255, 0.597); /* Fondo blanco transparente */
+footer {
   padding: 0px; /* Espacio alrededor del footer */
-  border-radius: 5px; /* Bordes redondeados del contenedor */
   text-align: center; /* Centra el contenido del footer */
+  font-size: smaller;
 }

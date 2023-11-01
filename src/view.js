@@ -20,12 +20,13 @@ export const renderItems = (data) => {
         <dt>Calificación de la Audiencia:</dt><dd itemprop="audienceRating">${element.facts.audienceRating}</dd>
       `
 
+    itemList.setAttribute("itemscope", "");
+    itemList.setAttribute("itemtype","película");
     itemContainer.setAttribute("itemscope", "");
     itemContainer.setAttribute("itemtype", "películas");
-    itemList.setAttribute("itemtype","")
 
     itemList.appendChild(itemContainer);
-    list.appendChild(itemList)
+    list.appendChild(itemList);
   });
 
   return list;

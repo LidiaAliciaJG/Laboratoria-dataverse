@@ -3,7 +3,7 @@
 
 Proyecto desarrollado para el Bootcamp de Laboratoria en Desarrollo Web.
 
-Este sitio web permite visualizar un conjunto de datos cuya temática es películas, esta información fue generada con prompting utilizando ChatGPT. Además permite filtrar por categoría y año de estreno, ordenar de ascendente y descendente según su nombre, y se visualizan dos estadíticas: número de películas mostradas y su porcentaje promedio de aceptación según la crítica. 
+Este sitio web permite visualizar un conjunto de datos cuya temática es películas, esta información fue generada con prompting utilizando ChatGPT. Además permite filtrar por categoría y año de estreno, ordenar de ascendente y descendente según su nombre, y se visualizan dos estadísticas: número de películas mostradas y su porcentaje promedio de aceptación según la crítica. 
 
 ***
 
@@ -26,6 +26,7 @@ Con el fin de descubrir las necesidades el usuario, se realizaron 5 historias de
 
 A partir de lo anterior, se realizó un prototipado de alta fidelidad con interacción a través de Figma. A continuación se encuentra la versión mobile y la de escritorio que se crearon con el fin de seguir la metodología Mobile First:
 [Prototipo de alta resolución para móviles](https://www.figma.com/proto/wEhsKfwlfUiGR9cFomYMqY/Dataverse-Project?type=design&node-id=393-361&t=OfUPieCaUroi7FCw-1&scaling=scale-down&page-id=393%3A23&starting-point-node-id=393%3A361&mode=design)
+//
 [Prototipo de alta resolución para escritorio](https://www.figma.com/proto/wEhsKfwlfUiGR9cFomYMqY/Dataverse-Project?type=design&node-id=237-144&t=Z1IuBdZn4yvCWZkQ-1&scaling=scale-down&page-id=4%3A23&starting-point-node-id=237%3A144&mode=design)
 
 Para su desarrollo se realizó una planeación con los objetivos que se pueden observar en las siguientes imágenes, éstos se plantearon en la organización de la definición de terminado según los requerimientos del bootcamp y los descubiertos por las historias de usuario.
@@ -38,10 +39,11 @@ Tras el inicio del proyecto se eligió la temática de películas, por lo que, c
 ![Prompt utilizado](https://github.com/LidiaAliciaJG/Laboratoria-dataverse/blob/5559e14614f99dea2a75926fa49f1223a883f35b/src/imagenes/Laboratoria%20Prototipos.gif)
 
 Una vez desarrollado el prototipado se realizaron test de usabilidad a través del link ya compartido, se recibieron comentarios tanto del diseño como la facilidad de acceso a las opciones que se solicitaron explorar. A continuación un listado de los problemas presentados:
-- [ ]No se ubicaba el botón de "datos extra" fácilmente.
-- [ ]Se cuestionó la forma de visualizar la categoría elegida más un filtro extra.
-- [ ]Se consideró poco intuitivo el elegir un tipo de filtro y después elegir la opción de aquel tipo.
-- [ ]Se consideró una ruta larga elegir una categoría y en otro menú elegir el filtrado extra.
+- [ ] No se ubicaba el botón de "datos extra" fácilmente.
+- [ ] Se cuestionó la forma de visualizar la categoría elegida más un filtro extra.
+- [ ] Se consideró poco intuitivo el elegir un tipo de filtro y después elegir la opción de aquel tipo.
+- [ ] Se consideró una ruta larga elegir una categoría y en otro menú elegir el filtrado extra.
+
 Tras los comentarios se optó por emplear un sitio web más simple con el fin de mostrar el contenido y menú en un solo sitio, los filtros se disminuyeron y facilitaron su acceso, además en una primer etapa se decidió por eliminar el primer filtrado "obligatorio" por categoría. Ya desarrollado el proyecto se realizó una prueba de usabilidad a una menor cantidad de personas, en ésta se recibieron comentarios sobre la facilidad de entendimiento sobre el uso del sitio web.
 
 ## Características de la aplicación

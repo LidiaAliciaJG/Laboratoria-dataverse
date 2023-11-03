@@ -1,4 +1,4 @@
-@media (min-width: 770px) {
+@media (min-width: 1000px) {
   * {
     font-size: 16px;
   }
@@ -21,7 +21,17 @@
     font-size: 8px;
   }
 
+  nav {
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+  
 }
+
+
 
 body {
   background-color: rgb(26, 26, 26);
@@ -41,8 +51,7 @@ header {
 }
 
 header img {
-  width: 70px;
-  margin-right: 30px;
+  width: 100px;
 }
 
 h1 {
@@ -50,9 +59,9 @@ h1 {
   font-weight: 700;
 }
 
-.estadisticas {
-  margin-left: 0px;
-  font-weight: 700;
+#estadisticas {
+  font-weight: 500;
+  margin-left: 10px;
 }
 
 nav {
@@ -63,17 +72,24 @@ nav {
   position: sticky;
   top: 0;
   flex-wrap: wrap;
-  font-weight: 500;
+  font-weight: 600;
+  justify-content: none;
 }
 
 
 label[for="type-select"],
 label[for="temporality-select"],
 label[for="sort-select"],
-select,
-#button-clear {
+select {
   margin: 6px;
   margin-right: 70px;
+  color: whitesmoke;
+  background-color: black;
+  border-color: white;
+}
+
+#button-clear {
+  margin: 6px;
   color: whitesmoke;
   background-color: black;
   border-color: white;
@@ -91,7 +107,7 @@ select,
 
 /* Estilo para los términos y definiciones en la tarjeta */
 .card dt {
-  font-weight: bold;
+  font-weight: 600;
   margin-top: 5px;
   color: #777777
 }
@@ -108,26 +124,29 @@ select,
 }
 
 ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /*display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));*/
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-ul li:hover {
+.card:hover {
   background-color: rgb(255, 53, 53);
   transition: background-color 0.3s; /* Agrega una transición suave */
-  .card dt {
-    color: black;
-  }
 }
 
-li {
+.card:hover dt {
+  color: black;
+}
+
+.card {
   background-color: black;
   border-radius: 10px;
   padding: 20px;
+  flex: 1 1 300px;
 }
 
 footer {

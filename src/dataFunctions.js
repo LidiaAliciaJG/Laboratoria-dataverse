@@ -39,6 +39,6 @@ export const computeStats = (data) => {
   const dataCritic = data.map(element => parseInt(element.facts.criticRating));
   const sumCritic = (dataCritic.reduce((sum, element) => sum + element, 0));
   const promCritic = sumCritic / numMovies
-  const criticMovies = Math.round(promCritic*10)/10;
-  return {numMovies, criticMovies};
+  const criticMovies = Math.round(promCritic * 10) / 10;
+  return { numMovies, criticMovies };
 };

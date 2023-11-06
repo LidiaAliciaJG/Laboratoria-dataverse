@@ -62,27 +62,27 @@ export const dataset = [
 
 export const dataset2 = [
   {
-    "id": "resident-evil-1",
-    "name": "Resident Evil",
-    "type": "Terror",
-    "shortDescription": "Película de terror y ciencia ficción basada en el videojuego.",
-    "description": "Resident Evil es una película de terror y ciencia ficción dirigida por Paul W.S. Anderson y lanzada en 2002...",
-    "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRreeKTZliPW4bM0t5bQOkDSvkd3qR70NQDnUT1_rfSjI3M_8tX",
-    "trailerUrl": "https://www.youtube.com/watch?v=aNEMuldkKnA",
+    "id": "la-la-land",
+    "name": "La La Land",
+    "type": "Comedia Romántica",
+    "shortDescription": "Musical romántico dirigido por Damien Chazelle",
+    "description": "La La Land es un musical romántico que sigue la historia de...",
+    "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRTeGqgCfnw0J5becKNZ46EqVmeGOxTvjQfEl3LjlKY1AOgLcqv",
+    "trailerUrl": "https://youtu.be/45s24h98iOc?si=-IoxO1zByzBdi3aR",
     "facts": {
-      "releaseDate": "15 de marzo de 2002",
-      "temporality": "2002",
+      "releaseDate": "9 de diciembre de 2016 (EE. UU.)",
+      "temporality": "2016",
       "mainActors": [
-        "Milla Jovovich",
-        "Michelle Rodriguez",
-        "Eric Mabius",
-        "James Purefoy",
-        "Colin Salmon"
+        "Ryan Gosling",
+        "Emma Stone",
+        "John Legend"
       ],
-      "awards": ["Ninguno"], // Dejar vacío si no ha ganado ningún premio
-      "budget": "Aproximadamente $33 millones de dólares",
-      "criticRating": "35%",
-      "audienceRating": "67%"
+      "awards": [
+        "6 premios Oscar, incluyendo Mejor Director y Mejor Actriz"
+      ],
+      "budget": "$30 millones",
+      "criticRating": "91%",
+      "audienceRating": "81%"
     }
   },
   {
@@ -110,27 +110,27 @@ export const dataset2 = [
     }
   },
   {
-    "id": "la-la-land",
-    "name": "La La Land",
-    "type": "Comedia Romántica",
-    "shortDescription": "Musical romántico dirigido por Damien Chazelle",
-    "description": "La La Land es un musical romántico que sigue la historia de...",
-    "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRTeGqgCfnw0J5becKNZ46EqVmeGOxTvjQfEl3LjlKY1AOgLcqv",
-    "trailerUrl": "https://youtu.be/45s24h98iOc?si=-IoxO1zByzBdi3aR",
+    "id": "resident-evil-1",
+    "name": "Resident Evil",
+    "type": "Terror",
+    "shortDescription": "Película de terror y ciencia ficción basada en el videojuego.",
+    "description": "Resident Evil es una película de terror y ciencia ficción dirigida por Paul W.S. Anderson y lanzada en 2002...",
+    "imageUrl": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRreeKTZliPW4bM0t5bQOkDSvkd3qR70NQDnUT1_rfSjI3M_8tX",
+    "trailerUrl": "https://www.youtube.com/watch?v=aNEMuldkKnA",
     "facts": {
-      "releaseDate": "9 de diciembre de 2016 (EE. UU.)",
-      "temporality": "2016",
+      "releaseDate": "15 de marzo de 2002",
+      "temporality": "2002",
       "mainActors": [
-        "Ryan Gosling",
-        "Emma Stone",
-        "John Legend"
+        "Milla Jovovich",
+        "Michelle Rodriguez",
+        "Eric Mabius",
+        "James Purefoy",
+        "Colin Salmon"
       ],
-      "awards": [
-        "6 premios Oscar, incluyendo Mejor Director y Mejor Actriz"
-      ],
-      "budget": "$30 millones",
-      "criticRating": "91%",
-      "audienceRating": "81%"
+      "awards": ["Ninguno"], // Dejar vacío si no ha ganado ningún premio
+      "budget": "Aproximadamente $33 millones de dólares",
+      "criticRating": "35%",
+      "audienceRating": "67%"
     }
   },
 ];

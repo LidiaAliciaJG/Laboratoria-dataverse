@@ -3,6 +3,7 @@ import { renderItems } from './view.js';
 
 import data from './data/dataset.js';
 
+
 const dataList = document.querySelector("#root");
 //const renderData = (dataset) => {
 dataList.appendChild(renderItems(data));
@@ -23,6 +24,7 @@ renderStats(data);
 //main();
 
 const original = Array.from(data);
+
 
 const filterType = document.querySelector("#type-select");
 filterType.addEventListener("change", function () {

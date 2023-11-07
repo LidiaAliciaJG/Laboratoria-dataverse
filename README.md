@@ -59,6 +59,9 @@ El boilerplate del proyecto se divide en un archivo `dataset.js` que contiene el
 ## Deploy
 La aplicación se encuentra publicado a través de Github Pages, accesible a todo usuario: [Link](https://lidiaaliciajg.github.io/Laboratoria-dataverse/src/index.html).
 
+![Vista del sitio web](https://github.com/LidiaAliciaJG/Laboratoria-dataverse/blob/5559e14614f99dea2a75926fa49f1223a883f35b/src/imagenes/vista.png)
+
+
 ## Pruebas
 El proyecto contiene una configuración de 3 test donde se evalúa el funcionamiento y requirimientos esperados. Además se incluyó un test de pruebas unitarias, realizado con Jest, para evaluar las funciones realizadas de filtrado, ordenado y calculo de estadísticas.
 

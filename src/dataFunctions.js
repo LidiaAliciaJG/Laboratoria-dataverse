@@ -12,7 +12,11 @@ export const filterData = (data, filterBy, value) => {
         return dataset;
       }
     }
-    return data[filterBy] === value || data.facts[filterBy] === value;
+    if (value === "") {
+      return dataset;
+    } else {
+      return data[filterBy] === value || data.facts[filterBy] === value;
+    }
   }
   return data.filter(filtrado); //filter() requiere una funcion que returne true para revisar el array bajo esa condicion
 };

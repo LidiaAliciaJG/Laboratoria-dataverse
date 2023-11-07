@@ -27,17 +27,19 @@ const original = Array.from(data);
 
 
 const filterType = document.querySelector("#type-select");
-filterType.addEventListener("change", function () {
-  dataList.innerHTML = "";
+filterType.addEventListener("change", function (event) {
+  //dataList.innerHTML = "";
   const filterBy = filterType.name;
   filterState.filterByType = filterBy;
-  const value = filterType.value;
+  const value = event.target.value; //filterType.value;
   filterState.filterByTypeValue = value;
   const renderFilter = filterData(data, filterBy, value);
   if (filterState.filterByDate === "") {
+    dataList.innerHTML = "";
     dataList.appendChild(renderItems(renderFilter));
     renderStats(renderFilter);
   } else {
+    dataList.innerHTML = "";
     const filterBy = filterState.filterByDate;
     const value = filterState.filterByDateValue;
     const renderFilter2 = filterData(renderFilter, filterBy, value);
@@ -48,11 +50,11 @@ filterType.addEventListener("change", function () {
 });
 
 const filterDate = document.querySelector("#temporality-select");
-filterDate.addEventListener("change", function () {
+filterDate.addEventListener("change", function (event) {
   //dataList.innerHTML=""
   const filterBy = filterDate.name;
   filterState.filterByDate = filterBy;
-  const value = filterDate.value;
+  const value = event.target.value; //filterDate.value;
   filterState.filterByDateValue = value;
   const renderFilter = filterData(data, filterBy, value);
   if (filterState.filterByType === "") {
@@ -73,9 +75,9 @@ filterDate.addEventListener("change", function () {
 
 // Selecciona el elemento select
 const sortName = document.querySelector("#sort-select");
-sortName.addEventListener("change", function () {
+sortName.addEventListener("change", function (event) {
   //dataList.innerHTML=""
-  const sortOrder = sortName.value;
+  const sortOrder = event.target.value; //sortName.value;
   filterState.sortOrder = sortOrder;
   const sortBy = sortName.name;
   const sortedData = sortData(data, sortBy, sortOrder);

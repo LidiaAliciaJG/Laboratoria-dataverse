@@ -59,7 +59,7 @@ El boilerplate del proyecto se divide en un archivo `dataset.js` que contiene el
 ## Deploy
 La aplicación se encuentra publicado a través de Github Pages, accesible a todo usuario: [Link](https://lidiaaliciajg.github.io/Laboratoria-dataverse/src/index.html).
 
-![Vista del sitio web](https://github.com/LidiaAliciaJG/Laboratoria-dataverse/blob/5559e14614f99dea2a75926fa49f1223a883f35b/src/imagenes/vista.png)
+![Vista del sitio web](https://github.com/LidiaAliciaJG/Laboratoria-dataverse/blob/059e3663b9aad1f35c328ff640a38424903a707c/src/imagenes/vista.png)
 
 
 ## Pruebas
